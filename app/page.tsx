@@ -3,7 +3,7 @@ import getListings from "./actions/getListings";
 import ClientOnly from "./components/ClientOnly";
 import Container from "./components/Container";
 import EmptyState from "./components/EmptyState";
-import ListingsCard from "./components/listings/ListingsCard";
+import ListingsCard from "./components/listings/ListingCard";
 
 export default async function Home() {
   const listings = await getListings();
