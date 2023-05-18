@@ -11,7 +11,7 @@ datasource db {
 }
 
 model User {
-  id             Int       @id @default(autoincrement()) @map("_id")
+  id             String    @id @default(cuid()) @map("_id")
   email          String?   @unique
   name           String?
   emailVerified  DateTime?
@@ -27,8 +27,8 @@ model User {
 }
 
 model Account {
-  id                Int     @id @default(autoincrement()) @map("_id")
-  userId            Int
+  id                String  @id @default(cuid()) @map("_id")
+  userId            String
   type              String
   provider          String
   providerAccountId String
@@ -46,7 +46,7 @@ model Account {
 }
 
 model Listing {
-  id            Int      @id @default(autoincrement()) @map("_id")
+  id            String   @id @default(cuid()) @map("_id")
   title         String
   description   String
   imageSrc      String
@@ -56,7 +56,7 @@ model Listing {
   bathroomCount Int
   guestCount    Int
   locationValue String
-  userId        Int
+  userId        String
   price         Int
 
   user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -64,9 +64,9 @@ model Listing {
 }
 
 model Reservation {
-  id         Int      @id @default(autoincrement()) @map("_id")
-  userId     Int
-  listingId  Int
+  id         String   @id @default(cuid()) @map("_id")
+  userId     String
+  listingId  String
   startDate  DateTime
   endDate    DateTime
   totalPrice Int

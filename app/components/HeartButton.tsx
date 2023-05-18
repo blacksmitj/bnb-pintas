@@ -5,7 +5,7 @@ import { SafeUser } from "../types";
 import useFavorite from "../hooks/useFavorite";
 
 interface HeartButtonProps {
-  listingId: number;
+  listingId: string;
   currentUser?: SafeUser | null;
 }
 

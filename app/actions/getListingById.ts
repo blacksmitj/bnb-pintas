@@ -1,7 +1,7 @@
 import prisma from "@/app/libs/prismadb";
 
 interface IParams {
-  listingId?: number;
+  listingId?: string;
 }
 
 export default async function getListingById(
@@ -12,7 +12,7 @@ export default async function getListingById(
 
     const listing = await prisma.listing.findUnique({
       where: {
-        id: Number(listingId)
+        id: listingId
       },
       include: {
         user: true

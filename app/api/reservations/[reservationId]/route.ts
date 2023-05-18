@@ -24,7 +24,7 @@ export async function DELETE(
 
   const reservation = await prisma.reservation.deleteMany({
     where: {
-      id: Number(reservationId),
+      id: reservationId,
       OR: [
         {userId: currentUser.id},
         {listing: {userId: currentUser.id}}

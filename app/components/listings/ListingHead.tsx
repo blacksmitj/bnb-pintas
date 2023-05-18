@@ -7,10 +7,10 @@ import Image from "next/image";
 import HeartButton from "../HeartButton";
 
 interface ListingHeadProps {
+  id: string;
   title: string;
   locationValue: string;
   imageSrc: string;
-  id: number;
   currentUser?: SafeUser | null;
 }
 
