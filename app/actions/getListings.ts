@@ -4,8 +4,8 @@ import getCurrentUser from "./getCurrentUser";
 export interface IListingsParams {
   userId?: string;
   guestCount?: number;
-  roomCount: number;
-  bathroomCount: number;
+  roomCount?: number;
+  bathroomCount?: number;
   startDate?: string;
   endDate?: string;
   locationValue?: string;
@@ -17,15 +17,16 @@ export default async function getListings(
 ) {
     // const currentUser = await getCurrentUser();
     try {
-      const {userId,
-      roomCount,
-      guestCount,
-      bathroomCount,
-      locationValue,
-      startDate,
-      endDate,
-      category
-      } = params;
+      const {
+        userId,
+        roomCount,
+        guestCount,
+        bathroomCount,
+        locationValue,
+        startDate,
+        endDate,
+        category
+        } = params;
 
       let query: any = {}
 
