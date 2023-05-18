@@ -9,8 +9,6 @@ export default async function getFavoriteListings() {
       return[]
     }
 
-    // const favoriteIds: number[] = currentUser.favoriteIds.map((str) => Number(str));
-
     const favorites = await prisma.listing.findMany({
       where: {
         id: {

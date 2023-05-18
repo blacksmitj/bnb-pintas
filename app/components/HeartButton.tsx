@@ -13,7 +13,7 @@ const HeartButton: React.FC<HeartButtonProps> = ({
   listingId,
   currentUser,
 }) => {
-  let listingIdString = listingId.toString();
+  let listingIdString = listingId;
 
   const { hasFavorited, toggleFavorite } = useFavorite({
     listingIdString,
