@@ -40,4 +40,6 @@ const Home = async ({ searchParams }: HomeProps) => {
   );
 };
 
+export const dynamic = "auto";
+
 export default Home;
