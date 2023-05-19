@@ -13,11 +13,8 @@ const Logo = () => {
       className="hidden md:block cursor-pointer"
       height="100"
       width="100"
-      src="/Images/logo.png"
+      src="/images/logo.png"
     />
-    // <div>
-    //   <h1 className="font-bold md:block cursor-pointer">P3DW Kawaluyaan</h1>
-    // </div>
   );
 };
 
